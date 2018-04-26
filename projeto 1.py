@@ -1,12 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 26 13:18:58 2018
-
-@author: gugat
-"""
-
-# teste
-
+﻿
 #input
 print('Controle de estoque')
 print('0 - sair')
@@ -82,7 +74,26 @@ elif escolha == 3:
                 else:
                     print('Escolha invalida, escolha novamente')
                     
-#opcao 4
-elif escolha == 4:
-        for i in estoque:
-            print(i)
+#opcao 4    
+elif escolha == '4':
+        f = True
+        while f:
+            for i in estoque:
+                print(i,'-', 'Quantidade', estoque[i]['Quantidade'],'-', 'Valor padrão', 'R${0}'.format(estoque[i]['Valor']))
+            escolha = (input('Você gostaria de 1- ver os produtos em estoque negativo, 2- ver o valor total do estoque ou 3- voltar? '))
+            
+            if escolha == '1':
+                negativos = []
+                for i in estoque:
+                    if estoque[i]['Quantidade'] < 0:
+                        negativos.append(i)
+                print(negativos)
+                
+                
+            elif escolha == '2':
+                soma = 0
+                total = 0
+                for i in estoque:
+                    soma = estoque[i]['Quantidade'] * estoque[i]['Valor']
+                    total += soma
+                print('R${0}'.format(total))
