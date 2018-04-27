@@ -49,6 +49,7 @@ while z:
     print('3 - Alterar Loja')
     print('4 - Imprimir Lojas') 
     print('_' * 20)
+    print('Escreva "menu" para voltar a qualquer momento')
     escolha = (input('Faça sua escolha: '))
     
 #Opção 0: Cadastrar Loja
@@ -107,13 +108,13 @@ while z:
                         
                     print('Controle de Estoque')
                     print('_' * 20)
-                    print('0 - voltar para as lojas')
+                    print('0 - Voltar para as lojas')
                     print('1 - Cadastrar Item')
                     print('2 - Remover Item')
                     print('3 - Alterar Item')
                     print('4 - Imprimir Estoque')
                     print('_' * 20)
-                    print('escreva "menu" para voltar a qualquer momento')
+                    print('Escreva "menu" para voltar a qualquer momento')
                     
                     Escolha = (input('Faça sua escolha: '))
                     
